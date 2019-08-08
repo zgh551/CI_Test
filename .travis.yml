@@ -1,0 +1,11 @@
+language: c
+
+services:
+- docker
+
+before_install:
+- docker pull ubuntu
+- docker images
+- docker run -it --name test ubuntu bash
+  
+ 
