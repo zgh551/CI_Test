@@ -6,7 +6,7 @@ services:
 before_install:
 - docker pull bitcraze/builder
 #- docker run -it --rm -v ${PWD}:/module bitcraze/builder gcc main.c -o main
-- docker run -it --rm --mount type=bind,src=${PWD},dst=/module bitcraze/builder gcc main.c -o main
+- docker run -it --rm --mount type=bind,src=${PWD},dst=/module bitcraze/builder make
 script:
-- ./main
+- ./hello
 
